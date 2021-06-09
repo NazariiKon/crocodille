@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrocodileClient", "CrocodileClient\CrocodileClient.csproj", "{157104AE-893D-4109-A541-88F1EB2F79A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrocodileClient", "CrocodileClient\CrocodileClient.csproj", "{157104AE-893D-4109-A541-88F1EB2F79A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{BB6AD0C8-FA84-4A2E-BB51-4C8D49EA1B7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{157104AE-893D-4109-A541-88F1EB2F79A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{157104AE-893D-4109-A541-88F1EB2F79A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{157104AE-893D-4109-A541-88F1EB2F79A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB6AD0C8-FA84-4A2E-BB51-4C8D49EA1B7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB6AD0C8-FA84-4A2E-BB51-4C8D49EA1B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB6AD0C8-FA84-4A2E-BB51-4C8D49EA1B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB6AD0C8-FA84-4A2E-BB51-4C8D49EA1B7E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -51,7 +51,7 @@
                     <Button Name="sendMessageBtn" Width="30" DockPanel.Dock="Right" Margin="5" Background="LightGreen" Click="sendMessageBtn_Click"></Button>
                     <TextBox Name="messageTextBox" Margin="5"></TextBox>
                 </DockPanel>
-                <RichTextBox Name="messagesRichTextBox" Background="Khaki" IsReadOnly="True"></RichTextBox>
+                <TextBox Name="messagesTextBox" Background="Khaki" TextWrapping="Wrap" IsReadOnly="True"></TextBox>
             </DockPanel>
         </Grid>
     </Grid>

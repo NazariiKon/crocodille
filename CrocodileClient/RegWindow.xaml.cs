@@ -104,7 +104,7 @@ namespace CrocodileClient
                 }
             }
 
-            MainWindow mainWindow = new MainWindow();
+            MainWindow mainWindow = new MainWindow(new User() {Nickname = nicknameTextBox.Text, ip = null});
             mainWindow.Show();
             this.Close();
         }
