@@ -23,6 +23,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MyLib\MyLib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="crocodile.png" />
   </ItemGroup>
 

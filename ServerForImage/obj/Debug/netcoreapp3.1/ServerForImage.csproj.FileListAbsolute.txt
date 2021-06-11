@@ -1,0 +1,16 @@
+C:\Users\User10\Desktop\crocodille-main\crocodille-main\ServerForImage\bin\Debug\netcoreapp3.1\ServerForImage.exe
+C:\Users\User10\Desktop\crocodille-main\crocodille-main\ServerForImage\bin\Debug\netcoreapp3.1\ServerForImage.deps.json
+C:\Users\User10\Desktop\crocodille-main\crocodille-main\ServerForImage\bin\Debug\netcoreapp3.1\ServerForImage.runtimeconfig.json
+C:\Users\User10\Desktop\crocodille-main\crocodille-main\ServerForImage\bin\Debug\netcoreapp3.1\ServerForImage.runtimeconfig.dev.json
+C:\Users\User10\Desktop\crocodille-main\crocodille-main\ServerForImage\bin\Debug\netcoreapp3.1\ServerForImage.dll
+C:\Users\User10\Desktop\crocodille-main\crocodille-main\ServerForImage\bin\Debug\netcoreapp3.1\ServerForImage.pdb
+C:\Users\User10\Desktop\crocodille-main\crocodille-main\ServerForImage\bin\Debug\netcoreapp3.1\MyLib.dll
+C:\Users\User10\Desktop\crocodille-main\crocodille-main\ServerForImage\bin\Debug\netcoreapp3.1\MyLib.pdb
+C:\Users\User10\Desktop\crocodille-main\crocodille-main\ServerForImage\obj\Debug\netcoreapp3.1\ServerForImage.csprojAssemblyReference.cache
+C:\Users\User10\Desktop\crocodille-main\crocodille-main\ServerForImage\obj\Debug\netcoreapp3.1\ServerForImage.AssemblyInfoInputs.cache
+C:\Users\User10\Desktop\crocodille-main\crocodille-main\ServerForImage\obj\Debug\netcoreapp3.1\ServerForImage.AssemblyInfo.cs
+C:\Users\User10\Desktop\crocodille-main\crocodille-main\ServerForImage\obj\Debug\netcoreapp3.1\ServerForImage.csproj.CoreCompileInputs.cache
+C:\Users\User10\Desktop\crocodille-main\crocodille-main\ServerForImage\obj\Debug\netcoreapp3.1\ServerForImage.csproj.CopyComplete
+C:\Users\User10\Desktop\crocodille-main\crocodille-main\ServerForImage\obj\Debug\netcoreapp3.1\ServerForImage.dll
+C:\Users\User10\Desktop\crocodille-main\crocodille-main\ServerForImage\obj\Debug\netcoreapp3.1\ServerForImage.pdb
+C:\Users\User10\Desktop\crocodille-main\crocodille-main\ServerForImage\obj\Debug\netcoreapp3.1\ServerForImage.genruntimeconfig.cache

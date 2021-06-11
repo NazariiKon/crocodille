@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "MyLib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/MyLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MyLib.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "MyLib/1.0.0": {
+      "type": "project",
+      "path": "../MyLib/MyLib.csproj",
+      "msbuildProject": "../MyLib/MyLib.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "MyLib >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\User10\\.nuget\\packages\\": {}
@@ -13,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Project\\CrocodileClient\\Server\\Server.csproj",
+      "projectUniqueName": "C:\\Users\\User10\\Desktop\\crocodille-main\\crocodille-main\\Server\\Server.csproj",
       "projectName": "Server",
-      "projectPath": "D:\\Project\\CrocodileClient\\Server\\Server.csproj",
+      "projectPath": "C:\\Users\\User10\\Desktop\\crocodille-main\\crocodille-main\\Server\\Server.csproj",
       "packagesPath": "C:\\Users\\User10\\.nuget\\packages\\",
-      "outputPath": "D:\\Project\\CrocodileClient\\Server\\obj\\",
+      "outputPath": "C:\\Users\\User10\\Desktop\\crocodille-main\\crocodille-main\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User10\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -33,7 +52,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\User10\\Desktop\\crocodille-main\\crocodille-main\\MyLib\\MyLib.csproj": {
+              "projectPath": "C:\\Users\\User10\\Desktop\\crocodille-main\\crocodille-main\\MyLib\\MyLib.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

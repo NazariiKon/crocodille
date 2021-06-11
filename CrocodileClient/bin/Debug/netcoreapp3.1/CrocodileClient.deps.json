@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v3.1": {
       "CrocodileClient/1.0.0": {
         "dependencies": {
+          "MyLib": "1.0.0",
           "System.Data.SqlClient": "4.8.2",
           "System.Drawing.Common": "5.0.2"
         },
@@ -133,7 +134,12 @@
           "System.Security.Principal.Windows": "4.7.0"
         }
       },
-      "System.Security.Principal.Windows/4.7.0": {}
+      "System.Security.Principal.Windows/4.7.0": {},
+      "MyLib/1.0.0": {
+        "runtime": {
+          "MyLib.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -218,6 +224,11 @@
       "sha512": "sha512-ojD0PX0XhneCsUbAZVKdb7h/70vyYMDYs85lwEI+LngEONe/17A0cFaRFqZU+sOEidcVswYWikYOQ9PPfjlbtQ==",
       "path": "system.security.principal.windows/4.7.0",
       "hashPath": "system.security.principal.windows.4.7.0.nupkg.sha512"
+    },
+    "MyLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pTAlKZyoBDh4LNlu4kfOmFYDyFAp7QOyvzjiojjU8GOLvDnWAHaVs7dWN2hROGYzD0i5P5Q8qcl9W+gyMiSjjg==",
+  "dgSpecHash": "QeI/0c4AWnVPc7jsSVYi5RrvKWFRI5HhiEsrJ7zST0x0W+1L7rlehN2yPNpzU/7tdLHuvPxmMF3BlJ7oa0Ps2A==",
   "success": true,
-  "projectFilePath": "D:\\Project\\CrocodileClient\\CrocodileClient\\CrocodileClient.csproj",
+  "projectFilePath": "C:\\Users\\User10\\Desktop\\crocodille-main\\crocodille-main\\CrocodileClient\\CrocodileClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User10\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\User10\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

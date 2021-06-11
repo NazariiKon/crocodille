@@ -1,21 +1,25 @@
-﻿using System;
+﻿using MyLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Server
 {
     class Program
     {
+        static IPAddress iPAddress = IPAddress.Parse("192.168.137.1");
         // порт для прослуховування
         private const int port = 8080;
         // список учасників чату
         private static List<IPEndPoint> members = new List<IPEndPoint>(); // всі клієнти
 
         static void Main(string[] args)
-        { 
+        {
             // створення об'єкту UdpClient та встановлюємо порт для прослуховування
             UdpClient server = new UdpClient(port);
             // створюємо об'єкт для збреження адреси віддаленого хоста
@@ -67,16 +71,19 @@ namespace Server
                 server.Close();
             }
 
-            static bool AddMember(IPEndPoint endPoint)
+        }
+
+        static bool AddMember(IPEndPoint endPoint)
+        {
+            var member = members.FirstOrDefault(m => m.ToString() == endPoint.ToString());
+            if (member == null)
             {
-                var member = members.FirstOrDefault(m => m.ToString() == endPoint.ToString());
-                if (member == null)
-                {
-                    members.Add(endPoint);
-                    return true;
-                }
-                return false;
+                members.Add(endPoint);
+                return true;
             }
+            return false;
         }
     }
 }
+   
+       
