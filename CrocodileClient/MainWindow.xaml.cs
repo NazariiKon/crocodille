@@ -1,5 +1,6 @@
 ﻿using MyLib;
 using System;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
@@ -20,10 +21,12 @@ namespace CrocodileClient
     {
         User client;
         // адреса віддаленого хоста
-        private static string remoteIPAddress = "192.168.137.1";
+        private static string remoteIPAddress = "100.66.248.237";
         // порт віддаленого хоста
         private static int remotePort = 8080;
         private static int portToImage = 9393;
+
+        ObservableCollection<string> users = new ObservableCollection<string>();
 
 
         public MainWindow()
@@ -38,7 +41,7 @@ namespace CrocodileClient
             client.Client = new UdpClient(0);
             Task.Run(() => Listen());
             //Task.Run(() => ListenImage());
-
+            usersListBox.ItemsSource = users;
             SendMessage("<connect>");
 
         }
@@ -68,7 +71,7 @@ namespace CrocodileClient
             IPEndPoint iPEndPoint = new IPEndPoint(IPAddress.Parse(remoteIPAddress), remotePort);
             byte[] data;
             if (msg == "<connect>")
-                data = Encoding.UTF8.GetBytes($"{msg}");
+                data = Encoding.UTF8.GetBytes($"{msg}:{client.Nickname}");
             else
                 data = Encoding.UTF8.GetBytes($"{client.Nickname}: {msg}");
 
@@ -76,25 +79,47 @@ namespace CrocodileClient
         }
 
         private void Listen()
-        {
+        { 
             IPEndPoint iPEndPoint = null;
             while (true)
             {
-                try
+                //try
+                //{
+                byte[] data = client.Client.Receive(ref iPEndPoint);
+
+                string msg = Encoding.UTF8.GetString(data);
+                string[] messageSplit = null;
+                if (msg.IndexOf("<nicknames>") > -1)
                 {
-                    byte[] data = client.Client.Receive(ref iPEndPoint);
+                    //Dispatcher.BeginInvoke(new Action(() =>
+                    //{
+                    //    users = null;
+                    //}));
+                    messageSplit = msg.Split(':');
+                    for (int i = users.Count+1; i < messageSplit.Length; i++)
+                    {
+                        int index = i;
 
-                    string msg = Encoding.UTF8.GetString(data);
+                        Dispatcher.BeginInvoke(new Action(() =>
+                        {
+                            users.Add(messageSplit[index].ToString());
+                        }));
 
+                    }
+                }
+                else
+                {
                     Dispatcher.BeginInvoke(new Action(() =>
                     {
                         messagesTextBox.AppendText(msg + "\r\n");
                     }));
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+               
+                //}
+                //catch (Exception ex)
+                //{
+                //    MessageBox.Show(ex.Message);
+                //}
             }
         }
 

@@ -12,11 +12,13 @@ namespace Server
 {
     class Program
     {
-        static IPAddress iPAddress = IPAddress.Parse("192.168.137.1");
+        static IPAddress iPAddress = IPAddress.Parse("100.66.248.237");
         // порт для прослуховування
         private const int port = 8080;
         // список учасників чату
         private static List<IPEndPoint> members = new List<IPEndPoint>(); // всі клієнти
+        private static List<string> userNicknames = new List<string>(); // всі клієнти
+
 
         static void Main(string[] args)
         {
@@ -34,11 +36,34 @@ namespace Server
                     // конвертуємо масив байтів в рядок
                     string msg = Encoding.UTF8.GetString(bytes, 0, bytes.Length);
 
-                    if (msg == "<connect>")
+                    if (msg.IndexOf("<connect>") > -1)
                     {
+                        string[] messageSplit = msg.Split(':');
+                        userNicknames.Add(messageSplit[1]);
+
+                        string nicknames = "<nicknames>";
+                        for (int i = 0; i < userNicknames.Count; i++)
+                        {
+                            nicknames += ':' + userNicknames[i];
+                        }
+
                         Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine($"Request to connect from {groupEP} at {DateTime.Now.ToShortTimeString()}\n");
                         AddMember(groupEP);
+                       
+                        byte[] data = Encoding.UTF8.GetBytes(nicknames);
+                        foreach (var m in members)
+                        {
+                            try
+                            {
+                                server.Send(data, data.Length, m);
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine($"Error with {m}: {ex.Message}\n");
+                            }
+                        }
                     }
                     else
                     {

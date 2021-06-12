@@ -45,7 +45,7 @@
                 <ColumnDefinition Width="2.5*"/>
             </Grid.ColumnDefinitions>
 
-            <ListBox Name="usersListBox" Background="Peru" ScrollViewer.VerticalScrollBarVisibility="Visible"></ListBox>
+            <ListBox Name="usersListBox" Background="Peru" ScrollViewer.VerticalScrollBarVisibility="Visible" FontSize="20" FontWeight="Bold"></ListBox>
 
             <DockPanel Grid.Column="1">
                 <DockPanel DockPanel.Dock="Bottom">

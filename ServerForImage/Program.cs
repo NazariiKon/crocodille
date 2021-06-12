@@ -9,7 +9,7 @@ namespace ServerForImage
     class Program
     {
         // адреса віддаленого хоста
-        static IPAddress iPAddress = IPAddress.Parse("192.168.137.1");
+        static IPAddress iPAddress = IPAddress.Parse("100.66.248.237");
         // порт віддаленого хоста
         static int port = 9393;
 

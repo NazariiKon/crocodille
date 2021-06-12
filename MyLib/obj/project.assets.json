@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User10\\Desktop\\crocodille-main\\crocodille-main\\MyLib\\MyLib.csproj",
+      "projectUniqueName": "D:\\Project\\CrocodileClient\\CrocodileClient\\MyLib\\MyLib.csproj",
       "projectName": "MyLib",
-      "projectPath": "C:\\Users\\User10\\Desktop\\crocodille-main\\crocodille-main\\MyLib\\MyLib.csproj",
+      "projectPath": "D:\\Project\\CrocodileClient\\CrocodileClient\\MyLib\\MyLib.csproj",
       "packagesPath": "C:\\Users\\User10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User10\\Desktop\\crocodille-main\\crocodille-main\\MyLib\\obj\\",
+      "outputPath": "D:\\Project\\CrocodileClient\\CrocodileClient\\MyLib\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User10\\AppData\\Roaming\\NuGet\\NuGet.Config",

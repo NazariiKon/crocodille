@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User10\\Desktop\\crocodille-main\\crocodille-main\\ServerForImage\\ServerForImage.csproj",
+      "projectUniqueName": "D:\\Project\\CrocodileClient\\CrocodileClient\\ServerForImage\\ServerForImage.csproj",
       "projectName": "ServerForImage",
-      "projectPath": "C:\\Users\\User10\\Desktop\\crocodille-main\\crocodille-main\\ServerForImage\\ServerForImage.csproj",
+      "projectPath": "D:\\Project\\CrocodileClient\\CrocodileClient\\ServerForImage\\ServerForImage.csproj",
       "packagesPath": "C:\\Users\\User10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User10\\Desktop\\crocodille-main\\crocodille-main\\ServerForImage\\obj\\",
+      "outputPath": "D:\\Project\\CrocodileClient\\CrocodileClient\\ServerForImage\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User10\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -53,8 +53,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\User10\\Desktop\\crocodille-main\\crocodille-main\\MyLib\\MyLib.csproj": {
-              "projectPath": "C:\\Users\\User10\\Desktop\\crocodille-main\\crocodille-main\\MyLib\\MyLib.csproj"
+            "D:\\Project\\CrocodileClient\\CrocodileClient\\MyLib\\MyLib.csproj": {
+              "projectPath": "D:\\Project\\CrocodileClient\\CrocodileClient\\MyLib\\MyLib.csproj"
             }
           }
         }

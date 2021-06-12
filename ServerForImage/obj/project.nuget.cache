@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RC4EhTyZDjECnfz4vIPV5uc+ufssa5zNk5wEpNNcNAvXC52r2KnMxgJpPc8VlwvIvSVzeaWd2nJAhAle68cFnA==",
+  "dgSpecHash": "oiG9qnPFcre7CjgeeUP+TlLNpnSZcAg4K7lnbIZquhEYVLF4evr9onRHDsjj/Y4bu2ALTULRA/w8BgPf6c3j8w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User10\\Desktop\\crocodille-main\\crocodille-main\\ServerForImage\\ServerForImage.csproj",
+  "projectFilePath": "D:\\Project\\CrocodileClient\\CrocodileClient\\ServerForImage\\ServerForImage.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
