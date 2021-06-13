@@ -48,7 +48,6 @@ namespace CrocodileClient
                                 return;
                             }
                         }
-
                     }
                 }
             }

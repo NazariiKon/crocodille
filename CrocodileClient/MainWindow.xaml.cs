@@ -2,6 +2,7 @@
 using System;
 using System.Collections.ObjectModel;
 using System.IO;
+using System.IO.Compression;
 using System.Net;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -27,7 +28,6 @@ namespace CrocodileClient
         private static int portToImage = 9393;
 
         ObservableCollection<string> users = new ObservableCollection<string>();
-
 
         public MainWindow()
         {
@@ -83,19 +83,12 @@ namespace CrocodileClient
             IPEndPoint iPEndPoint = null;
             while (true)
             {
-                //try
-                //{
                 byte[] data = client.Client.Receive(ref iPEndPoint);
 
                 string msg = Encoding.UTF8.GetString(data);
-                string[] messageSplit = null;
                 if (msg.IndexOf("<nicknames>") > -1)
                 {
-                    //Dispatcher.BeginInvoke(new Action(() =>
-                    //{
-                    //    users = null;
-                    //}));
-                    messageSplit = msg.Split(':');
+                    string[] messageSplit = msg.Split(':');
                     for (int i = users.Count+1; i < messageSplit.Length; i++)
                     {
                         int index = i;
@@ -104,7 +97,6 @@ namespace CrocodileClient
                         {
                             users.Add(messageSplit[index].ToString());
                         }));
-
                     }
                 }
                 else
@@ -114,12 +106,6 @@ namespace CrocodileClient
                         messagesTextBox.AppendText(msg + "\r\n");
                     }));
                 }
-               
-                //}
-                //catch (Exception ex)
-                //{
-                //    MessageBox.Show(ex.Message);
-                //}
             }
         }
 
@@ -127,20 +113,36 @@ namespace CrocodileClient
         //{
         //    while (true)
         //    {
-        //        TcpClient client = new TcpClient(remoteIPAddress, portToImage);
+        //        IPEndPoint endpoint = new IPEndPoint(IPAddress.Parse(remoteIPAddress), portToImage);
+        //        TcpClient client = new TcpClient();
+        //        client.Connect(endpoint);
 
-        //        BinaryFormatter serializer = new BinaryFormatter();
-        //        var info = (FileTransferInfo)serializer.Deserialize(client.GetStream());
+        //        NetworkStream stream = client.GetStream();
+        //        //var info = (FileTransferInfo)serializer.Deserialize(client.GetStream());
+        //        byte[] buffer = new byte[client.ReceiveBufferSize];
+        //        int read = stream.Read(buffer, 0, buffer.Length);
+        //        if (read > 0)
+        //        {
+        //            FileTransferInfo info;
+        //            BinaryFormatter serializer = new BinaryFormatter();
+        //            using (var ms = new MemoryStream(buffer))
+        //            {
+        //                using (var ds = new DeflateStream(ms, CompressionMode.Decompress, true))
+        //                {
+        //                    info = (FileTransferInfo)serializer.Deserialize(ds);
+        //                }
+        //            }
 
-        //        // byte to imagesource
-        //        BitmapImage biImg = new BitmapImage();
-        //        MemoryStream ms = new MemoryStream(info.Data);
-        //        biImg.BeginInit();
-        //        biImg.StreamSource = ms;
-        //        biImg.EndInit();
+        //            //// byte to imagesource
+        //            BitmapImage biImg = new BitmapImage();
+        //            MemoryStream ms1 = new MemoryStream(info.Data);
+        //            biImg.BeginInit();
+        //            biImg.StreamSource = ms1;
+        //            biImg.EndInit();
 
-        //        ImageSource imgSrc = biImg as ImageSource;
-        //        inkImage.Source = imgSrc;
+        //            ImageSource imgSrc = biImg as ImageSource;
+        //            inkImage.Source = imgSrc;
+        //        }
         //    }
         //}
 

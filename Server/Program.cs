@@ -6,6 +6,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Server
@@ -18,12 +19,12 @@ namespace Server
         // список учасників чату
         private static List<IPEndPoint> members = new List<IPEndPoint>(); // всі клієнти
         private static List<string> userNicknames = new List<string>(); // всі клієнти
-
+        // створення об'єкту UdpClient та встановлюємо порт для прослуховування
+        private static UdpClient server = new UdpClient(port);
 
         static void Main(string[] args)
         {
-            // створення об'єкту UdpClient та встановлюємо порт для прослуховування
-            UdpClient server = new UdpClient(port);
+            
             // створюємо об'єкт для збреження адреси віддаленого хоста
             IPEndPoint groupEP = null;
 
@@ -40,6 +41,7 @@ namespace Server
                     {
                         string[] messageSplit = msg.Split(':');
                         userNicknames.Add(messageSplit[1]);
+                        //Task.Run(() => Game());
 
                         string nicknames = "<nicknames>";
                         for (int i = 0; i < userNicknames.Count; i++)
@@ -97,6 +99,31 @@ namespace Server
             }
 
         }
+
+        //static private void Game()
+        //{
+        //    while (true)
+        //    {
+        //        if (members.Count > 2)
+        //        {
+        //            Random random = new Random();
+        //            int rnd = random.Next(0, members.Count);
+        //            byte[] bytes = Encoding.UTF8.GetBytes($"<randomUser>:{userNicknames[rnd]}");
+
+        //            try
+        //            {
+        //                server.Send(bytes, bytes.Length, members[rnd]);
+        //                return;
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                Console.ForegroundColor = ConsoleColor.Red;
+        //                Console.WriteLine($"Error with {members[rnd]}: {ex.Message}\n");
+        //            }
+        //            Thread.Sleep(30000);
+        //        }
+        //    }
+        //}
 
         static bool AddMember(IPEndPoint endPoint)
         {
